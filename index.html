@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form Clone</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="form_header">
+        <div class="form_header_left">
+            <img src="images/google-forms.png" class="form_header_icon" height="45px" width="40px">
+            <input type="text" id="form-title" placeholder="Untitled Form" class="form_name">
+            <img src="images/folder.png" alt="" class="form_header_icon" height="20px" width="20px">
+            <img src="images/star.png" alt="star" class="form_header_icon" height="20px" width="20px">
+        </div>
+        <div class="form_header_right">
+            <span><img src="images/art-palette.svg" alt="pallette" height="20px" width="20px"></span>
+            <span><img src="images/view.png" alt="eye" height="20px" width="20px" onclick="previewForm()"></span>
+            <span><img src="images/undo.png" alt="undo" height="20px" width="20px"></span>
+            <span><img src="images/redo.png" alt="redo" height="20px" width="20px"></span>
+            <button class="btn">Send</button>
+            <span><img src="images/dots.png" alt="menu" height="30px" width="30px"></span>
+            <span><img src="images/user.png" alt="" height="30px" width="30px"></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <input type="radio" class="tab-toggle" name="tab-toggle" id="tab1" checked>
+            <input type="radio" class="tab-toggle" name="tab-toggle" id="tab2">
+            <input type="radio" class="tab-toggle" name="tab-toggle" id="tab3">
+
+            <ul class="tab-list">
+                <li class="tab-item">
+                    <label class="tab-trigger" for="tab1"><b>Questions</b></label>
+                </li>
+                <li class="tab-item">
+                    <label class="tab-trigger" for="tab2"><b>Responses</b></label>
+                </li>
+                <li class="tab-item">
+                    <label class="tab-trigger" for="tab3"><b>Settings</b></label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="page_layout">
+        <br>
+        <div class="section">
+
+            <div class="form_container">
+                <div class="form_container_top">
+                    <input type="text" id="form-title" class="form_container_top_title" style="color: black;" placeholder="Untitled Form">
+                    <input type="text" id="form-desc" class="form_container_top_desc" style="color: black;" placeholder="Form Description">
+                </div>
+
+                <br>
+
+                <!--New Questions will get added here-->
+                <div class = "question_box">
+                    <div class = "question_box_header">
+                        <input type="text" id ="" class="question_box_header_question"style ="color: black;" placeholder = "Question" >
+                        <img src = "./images/image.png" alt = "add an image" height = "20px" width = "20px">
+                        <div class="question_box_header_question_type" >
+                            <button class="question_box_header_question_type_button">Multiple choice</button>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+
+            <div class = "sidebar">
+                <button>
+                <img src = "./images/add.png" width = "20px" height = "20px">
+                </button>
+             </div>
+        </div>
+    </div>
+    <!-- now we are trying the side bar -->
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
