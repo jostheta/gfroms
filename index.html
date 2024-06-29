@@ -66,28 +66,41 @@
                 <br>
 
                 <!--New Questions will get added here-->
-                <div class = "question_box">
-                    <div class = "question_box_header">
-                        <input type="text" id ="" class="question_box_header_question"style ="color: black;" placeholder = "Question" >
+                <div class = "question-box" id = "question-template">
+                    <!--This is the question-box header contains quesion,type,add an img-->
+                    <div class = "question-box_header">
+                        <input type="text" id ="" class="question-box_header_question"style ="color: black;" placeholder = "Question" >
                         <img src = "./images/image.png" alt = "add an image" height = "20px" width = "20px">
-                        <div class="question_box_header_question_type" >
-                            <button class="question_box_header_question_type_button">Multiple choice</button>
+                        <div class="question-box_header_question-type" >
+                            <button class="question-box_header_question-type_button">Multiple choice</button>
                         </div>
-                    </div>   
+                    </div>
+                    <!--These are the style buttons to style your question -->
+                    <div class ="question-box_header-style">
+                        &nbsp
+                         <button><img src = "./images/bold.png" width = "14px" height = "14px"></button>
+                         <button><img src = "./images/italics.png" width = "14px" height = "14px"></button>
+                         <button><img src = "./images/underline.png" width = "16px" height = "16px"></button>
+                    </div>
+
                 </div>
             </div>
 
             <div class = "sidebar">
-                <button>
-                <img src = "./images/add.png" width = "20px" height = "20px">
+                <button id = "add-question">
+                <img src = "./images/add.png" width = "20px" height = "20px" alt = "add button">
                 </button>
              </div>
         </div>
     </div>
     <!-- now we are trying the side bar -->
     
-
+    
+     <!-- Include jQuery from a CDN -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Link to external script -->
     <script src="script.js"></script>
+   
 </body>
 
 </html>
