@@ -226,26 +226,11 @@
     box-sizing: border-box;
     border: none; /* Remove default border */
     outline: none; /* Remove default focus outline */
-    position: relative; /* Ensure relative positioning for pseudo-element */
+   
 
   }
   
-  .question-box_header_question:focus {
-    /* Add bottom border when focused */
-    outline: none;
-}
-
-.question-box_header_question:focus::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: purple;
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Smooth transition */
-}
-
+  
   .question-box_header_question:hover {
     background-color: #f0f0f0;
   }
@@ -284,6 +269,37 @@
     background-color: white;
   }
 
+
+  .question-box_option-block{
+    display: flex;
+    width:auto;
+    gap: 5px;
+
+  }
+
+  .question-box_option-block_option-text{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 11pt;
+    width: 540px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid purple;
+
+  }
+
+  .question-box_option-block_option-close{
+    border: none;
+    background-color: white;
+    outline: none;
+  }
+
+  .question-box_add-option button{
+    border: none;
+    background-color: white;
+    font-size: 11pt;
+    outline: none;
+  }
 
 
 

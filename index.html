@@ -64,7 +64,6 @@
                 </div>
 
                 <br>
-
                 <!--New Questions will get added here-->
                 <div class = "question-box" id = "question-template">
                     <!--This is the question-box header contains quesion,type,add an img-->
@@ -82,8 +81,27 @@
                          <button><img src = "./images/italics.png" width = "14px" height = "14px"></button>
                          <button><img src = "./images/underline.png" width = "16px" height = "16px"></button>
                     </div>
+                    <br>
+                    
+                    <!--These are the options-->
+                    <div id ="options-container">
+                     <div class = "question-box_option-block" id = "option-template">
+                        <img src = "./images/circle.png" alt = "option circle" width="16px" height="16px">
+                        <input type = "text" placeholder="Option1" class = "question-box_option-block_option-text" >
+                        <button class = "question-box_option-block_option-close" id = "close-option"><img src = "./images/close.png"></button>
+                     </div>
+                     <br>
+                     <!--New options should be appended here-->
+                     <div id = new-options></div>
+                     <!--To Add a new option-->
+                     <div class = "question-box_add-option">
+                        <img src = "./images/circle.png" alt = "option circle" width="16px" height="16px">
+                        <button id = "add-option">Add Option</button>
+                     </div>
+                    </div>
 
                 </div>
+                <br>
             </div>
 
             <div class = "sidebar">
