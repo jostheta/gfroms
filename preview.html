@@ -1,16 +1,49 @@
-<div class="question_form">
-    <br>
-    <div class="section">
-        <div class="question_box">
-            <div class="question_form_top">
-                <input type="text" id="form-title" class="question_form_top_name" style="color: black;" placeholder="Untitled Form">
-                <input type="text" id="form-description" class="question_form_top_desc" style="color: black;" placeholder="Form Description">
-            </div>
-            <div class="sidebar">
-                <button id="add-question-button">
-                    <img src="./images/add.png" height="20px" width="20px">
-                </button>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Preview</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="preview-container" class="container">
+        <h2 id="preview-form-title"></h2>
+        <p id="preview-form-desc"></p>
+        <div id="preview-questions"></div>
     </div>
-</div>
+    <script>
+        // Retrieve the form data from localStorage
+        var formTitle = localStorage.getItem('formTitle');
+        var formDesc = localStorage.getItem('formDesc');
+        var questions = JSON.parse(localStorage.getItem('questions'));
+
+        // Set the form title and description
+        document.getElementById('preview-form-title').innerText = formTitle;
+        document.getElementById('preview-form-desc').innerText = formDesc;
+
+        // Render the questions and options
+        var previewQuestionsContainer = document.getElementById('preview-questions');
+
+        questions.forEach(function(question) {
+            var questionDiv = document.createElement('div');
+            questionDiv.className = 'question';
+
+            var questionTitle = document.createElement('h4');
+            questionTitle.innerText = question.questionText;
+            questionDiv.appendChild(questionTitle);
+
+            var optionsList = document.createElement('ul');
+            question.options.forEach(function(option) {
+                var optionItem = document.createElement('li');
+                optionItem.innerText = option;
+                optionsList.appendChild(optionItem);
+            });
+
+            questionDiv.appendChild(optionsList);
+            previewQuestionsContainer.appendChild(questionDiv);
+        });
+    </script>
+</body>
+</html>
